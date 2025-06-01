@@ -1,0 +1,8 @@
+Flask
+Flask-MySQLdb
+mysqlclient
+PyJWT
+Werkzeug
+Jinja2
+itsdangerous
+click
