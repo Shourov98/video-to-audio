@@ -8,9 +8,9 @@ USE auth;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL
 );
 
-INSERT INTO users (email, password) VALUES ('ahourov@gmail.com', 'password');
+INSERT INTO users (email, password) VALUES ('shourov@gmail.com', 'password');
 

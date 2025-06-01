@@ -24,4 +24,17 @@ def login():
         return jsonify({"message": "Missing Authorization header"}), 401
       
     # check for username nad passowrd
+    cur = mysql.connection.cursor()
+    res = cur.execute(
+        "SELECT email, password FROM user WHERE email=%s", (auth.username,)
+    )
     
+    if res > 0:
+        user_row = cur.fetchone()
+        email = user_row[0]
+        password = user_row[1]
+        
+        if auth.password != password or auth.username != email:
+            return jsonify({"message": "Invalid credentials"}), 401
+        
+            
