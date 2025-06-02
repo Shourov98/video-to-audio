@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: sweasytech/auth
+          image: shourov0412/vta-auth:v-1.0
           ports:
             - containerPort: 5000
           envFrom:
